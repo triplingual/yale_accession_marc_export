@@ -126,7 +126,7 @@ class AccessionMARCExport
                   AppConfig[:yale_accession_marc_export_file_extension] :
                   'txt'
 
-    "#{@vendor_code}-A-#{@date_run.iso8601.gsub('-', '')}.#{extension}"
+    "#{@vendor_code}-A.#{@date_run.iso8601.gsub('-', '')}.#{extension}"
   end
 
   def finished!
