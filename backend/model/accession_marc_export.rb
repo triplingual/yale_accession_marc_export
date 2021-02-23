@@ -34,7 +34,7 @@ class AccessionMARCExport
     }.tap do |date_subfields|
       title_field = MARC::DataField.new('245', '0', '0', ['a', accession.display_string])
       unless date_subfields['f'].empty?
-        title_field.append(MARC::Subfield.new('f', date_subfields['f'].join(', ')))
+        title_field.append(MARC::Subfield.new('f', ', ' + date_subfields['f'].join(', ')))
       end
 
       unless date_subfields['g'].empty?
